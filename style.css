@@ -14,16 +14,29 @@ body {
 .tile {
 	float: left;
 	margin: 8px;
-	background: rgb(238, 99, 99);
-	width: 100px;
-	height: 100px;
-	vertical-align: font-bottom;
+	background: rgb(128, 128, 128);
+	width: 130px;
+	height: 130px;
+	text-align: center;
+	line-height: 1.5em;
 }
 
 .c1{
-	margin-left: 25px;
+	margin-left: 40px;
 }
 
 .r1 {
-	margin-top: 25px;	
+	margin-top: 40px;	
+}
+
+span {
+	font-size: 1.5em;
+	display: inline-block;
+	line-height: 1.5em;
+	vertical-align: middle;
+	color: red;
+}
+
+.scoreboard {
+	float:right;
 }
