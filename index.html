@@ -2,30 +2,37 @@
 <html>
 
 <head>
-	<script src="lib/angular.js"></script>
+	<link rel="stylesheet" href="lib/normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
+	<script src="lib/jquery-1.11.0.min.js"></script>
 	<script src="main.js"></script>
 </head>
 
 <body ng-app='ColorChallenge'>
 
-	<div ng-controller='Main' class='game_container'>
-			{{person.name}}
-		<!-- <div class='row1_col1'></div>
-		<div class='row1_col2'></div>
-		<div class='row1_col3'></div>
-		<div class='row1_col4'></div>
-		<div class='row2_col1'></div>
-		<div class='row2_col2'></div>
-		<div class='row2_col3'></div>
-		<div class='row2_col4'></div>
-		<div class='row3_col1'></div>
-		<div class='row3_col2'></div>
-		<div class='row3_col3'></div>
-		<div class='row3_col4'></div>
-		<div class='row4_col1'></div>
-		<div class='row4_col2'></div>
-		<div class='row4_col3'></div>
-		<div class='row4_col4'></div> -->
+	<div class='header'><span class='title'>Color Challenge</span></div>
+
+	<div ng-controller='Main'>
+		<div class='container'>
+			<div class='tile r1 c1'></div>
+			<div class='tile r1 c2'></div>
+			<div class='tile r1 c3'></div>
+			<div class='tile r1 c4'></div>
+			<div class='tile r2 c1'></div>
+			<div class='tile r2 c2'></div>
+			<div class='tile r2 c3'></div>
+			<div class='tile r2 c4'></div>
+			<div class='tile r3 c1'></div>
+			<div class='tile r3 c2'></div>
+			<div class='tile r3 c3'></div>
+			<div class='tile r3 c4'></div>
+			<div class='tile r4 c1'></div>
+			<div class='tile r4 c2'></div>
+			<div class='tile r4 c3'></div>
+			<div class='tile r4 c4'></div>
+		</div>
+		
 	</div>
 	
 </body>

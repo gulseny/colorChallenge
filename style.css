@@ -1,0 +1,29 @@
+body {
+	font-family: 'Sofadi One', cursive;
+}
+
+.container {
+	background-color: rgb(229, 229, 229);
+	width: 500px;
+	height: 500px;
+	position: relative;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.tile {
+	float: left;
+	margin: 8px;
+	background: rgb(238, 99, 99);
+	width: 100px;
+	height: 100px;
+	vertical-align: font-bottom;
+}
+
+.c1{
+	margin-left: 25px;
+}
+
+.r1 {
+	margin-top: 25px;	
+}
