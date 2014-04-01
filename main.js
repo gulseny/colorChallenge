@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	var currentScore = 0;
 	var highestScore = 0;
-	var timeLeft = 20;
+	var timeLeft = 60;
 
 	var colors = ['red','blue', 'green', 'yellow', 'purple', 'pink'];
 	var colorCodes = ['#ff0000','#0000ff', '#00ff00', '#ffff00', '#800080', '#ff00ff'];
@@ -18,6 +18,7 @@ $(document).ready(function(){
 	};
 
 	var $tile = $('.tile');
+	var $timeLeft = $('.timeLeft');
 	var generateTiles = function(){
 		$tile.each(function(){
 			var input = generateIndeces();
@@ -25,24 +26,12 @@ $(document).ready(function(){
 		});
 	};
 
-	generateTiles();
-	var tileTimer = setInterval(generateTiles, 4000);
-	var gameTimer = setInterval(function(){
-		timeLeft--;
-		$('.timeLeft').text(timeLeft);
-		if(timeLeft === 0){
-			endGame();
-		}
-	}, 1000);
-
 	var endGame = function(){
 		console.log('game over!');
 		clearInterval(gameTimer);
 		clearInterval(tileTimer);
+		$tile.off('click');
 	};
-
-
-
 
 	$tile.on('click', function(){
 		var text = $(this).text();
@@ -62,5 +51,20 @@ $(document).ready(function(){
 		}
 		$('.currentScore').text(currentScore);
 	});
+
+	generateTiles();
+	var tileTimer = setInterval(generateTiles, 4000);
+	var gameTimer = setInterval(function(){
+		timeLeft--;
+		$timeLeft.text(timeLeft);
+		if(timeLeft === 0){
+			endGame();
+		}
+	}, 1000);
+
+
+
+
+
 });
 

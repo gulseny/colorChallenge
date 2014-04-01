@@ -15,18 +15,18 @@ body {
 	float: left;
 	margin: 8px;
 	background: rgb(128, 128, 128);
-	width: 130px;
-	height: 130px;
+	width: 100px;
+	height: 100px;
 	text-align: center;
 	line-height: 1.5em;
 }
 
 .c1{
-	margin-left: 40px;
+	margin-left: 25px;
 }
 
 .r1 {
-	margin-top: 40px;	
+	margin-top: 25px;	
 }
 
 span {
@@ -40,4 +40,9 @@ span {
 .scoreboard {
 	float:right;
 	margin-right: 50px;
+}
+
+.gameOver {
+	background-color: black;
+
 }
