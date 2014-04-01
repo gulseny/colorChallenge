@@ -19,6 +19,11 @@ $(document).ready(function(){
 
 	var $tile = $('.tile');
 	var $timeLeft = $('.timeLeft');
+	var $wrong = $('#wrong');
+    var $correct = document.getElementById('correct');
+    var $wrong = document.getElementById('wrong');
+
+
 	var generateTiles = function(){
 		$tile.each(function(){
 			var input = generateIndeces();
@@ -39,6 +44,7 @@ $(document).ready(function(){
 		var color_real = 'rgb(' + colorsLib[text] + ')';
 		console.log(color_tile, color_real);
 		if(color_tile === color_real) {
+			$correct.play();
 			console.log('+1')
 			currentScore++;
 			if(currentScore > highestScore){
@@ -46,6 +52,7 @@ $(document).ready(function(){
 				$('.highestScore').text(highestScore);
 			}
 		} else {
+			$wrong.play();
 			console.log('0')
 			currentScore = 0;
 		}

@@ -4,21 +4,25 @@
 <head>
 	<link rel="stylesheet" href="lib/normalize.css">
 	<link rel="stylesheet" href="style.css">
-	<link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
 	<script src="lib/jquery-1.11.0.min.js"></script>
 	<script src="main.js"></script>
 </head>
 
 <body>
 
-	<div class='header'><span class='title'>Color Challenge</span></div>
-	<div class='scoreboard'>
-		highest score:<span class='highestScore'>0</span><br>
-		current score:<span class='currentScore'>0</span>
+	<div class='header'><span class='title'>COLOR CHALLENGE</span></div>
+	<div class='scoreboard tag'>
+		HIGHEST SCORE<br><span class='highestScore'>0</span><br>
+		CURRENT SCORE<br><span class='currentScore'>0</span>
 	</div>
 
-	<div class='timer'>
-		time left:<span class='timeLeft'>60</span><br>
+	<div class='timer tag'>
+		TIME<br><span class='timeLeft'>60</span><br>
+	</div>
+
+	<div>
+		<audio id='correct' src='sounds/correct.mp3'></audio>
+		<audio id='wrong' src='sounds/wrong.mp3'></audio>
 	</div>
 
 	<div class='Main'>
