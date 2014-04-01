@@ -53,7 +53,7 @@ $(document).ready(function(){
 	});
 
 	generateTiles();
-	var tileTimer = setInterval(generateTiles, 4000);
+	var tileTimer = setInterval(generateTiles, 3000);
 	var gameTimer = setInterval(function(){
 		timeLeft--;
 		$timeLeft.text(timeLeft);
