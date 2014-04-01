@@ -4,11 +4,11 @@ $(document).ready(function(){
 	var highestScore = 0;
 	var timeLeft = 20;
 
-	var colors = ['red','blue', 'green', 'yellow', 'purple', 'pink'];
-	var colorCodes = ['#ff0000','#0000ff', '#00ff00', '#ffff00', '#800080', '#ff00ff'];
+	var colors = ['RED','BLUE', 'GREEN', 'YELLOW', 'PURPLE', 'PINK'];
+	var colorCodes = ['#cc0000','#0000ee', '#00ee00', '#ffff00', '#800080', '#ff00ff'];
 	var colorsLib = {
-		red: '255, 0, 0', blue: '0, 0, 255', green: '0, 255, 0', 
-		yellow: '255, 255, 0', purple: '128, 0, 128', pink: '255, 0, 255'
+		RED: '255, 0, 0', BLUE: '0, 0, 255', GREEN: '0, 255, 0', 
+		YELLOW: '255, 255, 0', PURPLE: '128, 0, 128', PINK: '255, 0, 255'
 	};
 
 	var generateIndeces = function(){
@@ -65,7 +65,7 @@ $(document).ready(function(){
 		timeLeft--;
 		$timeLeft.text(timeLeft);
 		if(timeLeft <= 5){
-			$timeLeft.css({'color': 'red', 'font-size': '2.5em'});
+			$timeLeft.css({'color': 'red', 'font-size': '3.5em'});
 		}
 		if(timeLeft === 0){
 			endGame();

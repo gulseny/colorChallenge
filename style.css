@@ -35,7 +35,7 @@ body {
 .tile {
 	float: left;
 	margin: 0.5px;
-	background: rgb(120, 120, 120);
+	background: rgb(100, 100, 100);
 	width: 100px;
 	height: 100px;
 	text-align: center;
@@ -77,7 +77,7 @@ body {
 }
 
 .tag span {
-	font-size: 1.5em;
+	font-size: 2.5em;
 	font-weight: bold;
 }
 
