@@ -12,7 +12,14 @@
 <body ng-app='ColorChallenge'>
 
 	<div class='header'><span class='title'>Color Challenge</span></div>
-	<div class='scoreboard'><span class='score'>score:</span></div>
+	<div class='scoreboard'>
+		highest score:<span class='highestScore'>0</span><br>
+		current score:<span class='currentScore'>0</span>
+	</div>
+
+	<div class='timer'>
+		time left:<span class='timeLeft'>60</span><br>
+	</div>
 
 	<div ng-controller='Main'>
 		<div class='container'>
