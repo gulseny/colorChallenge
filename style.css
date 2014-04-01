@@ -1,5 +1,6 @@
 body {
 	font-family: futura-extra-bold, sans-serif;
+	background-image: url('images/stardust.png');
 	width: 100%;
 	font-size: 1.3em;
 	font-weight: bold;
@@ -14,7 +15,7 @@ body {
 
 .how_to_play {
 	font-size: 1em;
-	font-weight: italic;
+	font-style: italic;
 	text-align: center;
 	color: gray;
 }
