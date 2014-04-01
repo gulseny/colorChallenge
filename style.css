@@ -12,6 +12,13 @@ body {
 	font-size: 2.5em;
 }
 
+.how_to_play {
+	font-size: 1em;
+	font-weight: italic;
+	text-align: center;
+	color: gray;
+}
+
 .container {
 	background-color: rgb(229, 229, 229);
 	width: 424px;
@@ -54,7 +61,7 @@ body {
 
 .timer {
 	position: absolute;
-	margin-top: 150px;
+	margin-top: 100px;
 	margin-left: 240px;
 	text-align: center;
 }
@@ -74,7 +81,7 @@ body {
 }
 
 .timeLeft {
-	color: red;
+	color: orange;
 }
 
 .scoreboard span {

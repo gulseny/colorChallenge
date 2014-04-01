@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	var currentScore = 0;
 	var highestScore = 0;
-	var timeLeft = 60;
+	var timeLeft = 6;
 
 	var colors = ['red','blue', 'green', 'yellow', 'purple', 'pink'];
 	var colorCodes = ['#ff0000','#0000ff', '#00ff00', '#ffff00', '#800080', '#ff00ff'];
@@ -60,10 +60,13 @@ $(document).ready(function(){
 	});
 
 	generateTiles();
-	var tileTimer = setInterval(generateTiles, 3000);
+	var tileTimer = setInterval(generateTiles, 2000);
 	var gameTimer = setInterval(function(){
 		timeLeft--;
 		$timeLeft.text(timeLeft);
+		if(timeLeft <= 5){
+			$timeLeft.css({'color': 'red', 'font-size': '2.5em'});
+		}
 		if(timeLeft === 0){
 			endGame();
 		}
