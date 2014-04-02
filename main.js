@@ -2,10 +2,10 @@ $(document).ready(function(){
 
 	var currentScore = 0;
 	var highestScore = 0;
-	var timeLeft = 20;
+	var timeLeft = 1;
 
 	var colors = ['RED','BLUE', 'GREEN', 'YELLOW', 'PURPLE', 'PINK'];
-	var colorCodes = ['#cc0000','#0000ee', '#00ee00', '#ffff00', '#800080', '#ff00ff'];
+	var colorCodes = ['#ff0000','#0000ff', '#00ff00', '#ffff00', '#800080', '#ff00ff'];
 	var colorsLib = {
 		RED: '255, 0, 0', BLUE: '0, 0, 255', GREEN: '0, 255, 0', 
 		YELLOW: '255, 255, 0', PURPLE: '128, 0, 128', PINK: '255, 0, 255'
@@ -18,8 +18,8 @@ $(document).ready(function(){
 	};
 
 	var $tile = $('.tile');
+	var $container = $('.container');
 	var $timeLeft = $('.timeLeft');
-	var $wrong = $('#wrong');
     var $correct = document.getElementById('correct');
     var $wrong = document.getElementById('wrong');
 
@@ -68,6 +68,7 @@ $(document).ready(function(){
 			$timeLeft.css({'color': 'red', 'font-size': '3.5em'});
 		}
 		if(timeLeft === 0){
+			$('dialog').addClass('modal').css('visibility', 'visible');
 			endGame();
 		}
 	}, 1000);
