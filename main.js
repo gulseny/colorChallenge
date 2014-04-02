@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	var currentScore = 0;
 	var highestScore = 0;
-	var timeLeft = 60;
+	var timeLeft = 1;
 
 	var colors = ['RED','BLUE', 'GREEN', 'YELLOW', 'PURPLE', 'PINK'];
 	var colorCodes = ['#ff0000','#0000ff', '#00ff00', '#ffff00', '#800080', '#ff00ff'];
