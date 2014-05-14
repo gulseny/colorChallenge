@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-	var $ready = $('.ready')
-	var $end = $('.end')
+	var $ready = $('.ready');
+	var $end = $('.end');
 	$end.css('visibility', 'hidden');
 	$ready.addClass('modal');
 
@@ -9,26 +9,26 @@ $(document).ready(function(){
 		$ready.removeClass('modal').css('visibility', 'hidden');
 		var currentScore = 0;
 		var highestScore = 0;
-		var timeLeft = 60;
+		var timeLeft = 10;
 
-		var colors = ['RED','BLUE', 'GREEN', 'YELLOW', 'PURPLE', 'PINK'];
+		var colors = ['red','blue', 'green', 'yellow', 'purple', 'pink'];
 		var colorCodes = ['#ff0000','#0000ff', '#00ff00', '#ffff00', '#800080', '#ff00ff'];
 		var colorsLib = {
-			RED: '255, 0, 0', BLUE: '0, 0, 255', GREEN: '0, 255, 0', 
-			YELLOW: '255, 255, 0', PURPLE: '128, 0, 128', PINK: '255, 0, 255'
+			red: '255, 0, 0', blue: '0, 0, 255', green: '0, 255, 0',
+			yellow: '255, 255, 0', purple: '128, 0, 128', pink: '255, 0, 255'
 		};
 
 		var generateIndeces = function(){
 			var indexColor = Math.floor(Math.random() *  colors.length);
 			var indexCode = Math.floor(Math.random() *  colorCodes.length);
-			return [colorCodes[indexCode], colors[indexColor]]
+			return [colorCodes[indexCode], colors[indexColor]];
 		};
 
 		var $tile = $('.tile');
 		var $container = $('.container');
 		var $timeLeft = $('.timeLeft');
-	    var $correct = document.getElementById('correct');
-	    var $wrong = document.getElementById('wrong');
+		var $correct = document.getElementById('correct');
+		var $wrong = document.getElementById('wrong');
 
 
 		var generateTiles = function(){
@@ -39,7 +39,6 @@ $(document).ready(function(){
 		};
 
 		var endGame = function(){
-			console.log('game over!');
 			clearInterval(gameTimer);
 			clearInterval(tileTimer);
 			$tile.off('click');
@@ -49,10 +48,8 @@ $(document).ready(function(){
 			var text = $(this).text();
 			var color_tile = $(this).css('color').toString();
 			var color_real = 'rgb(' + colorsLib[text] + ')';
-			console.log(color_tile, color_real);
 			if(color_tile === color_real) {
 				$correct.play();
-				console.log('+1')
 				currentScore++;
 				if(currentScore > highestScore){
 					highestScore = currentScore;
@@ -60,7 +57,6 @@ $(document).ready(function(){
 				}
 			} else {
 				$wrong.play();
-				console.log('0')
 				currentScore = 0;
 			}
 			$('.currentScore').text(currentScore);
