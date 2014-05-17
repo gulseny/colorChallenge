@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 		var currentScore = 0;
 		var highestScore = 0;
-		var timeLeft = 5;
+		var timeLeft = 60;
 		
 		var $timeLeft = $('.timeLeft');
 		$timeLeft.text(timeLeft);
