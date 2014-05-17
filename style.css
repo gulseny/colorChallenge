@@ -1,35 +1,76 @@
 body {
-	font-family: 'Comfortaa', cursive;
-	background-image: url('images/stardust.png');
-	width: 100%;
+	font-family: 'Comfortaa', sans-serif;
 	font-size: 1.3em;
 	font-weight: bold;
-	color: red;
+}
+
+.content {
+	width: 425px;
+	position: absolute;
+	left: 50%;
+	margin-left: -212px;
+	text-align: center;
 }
 
 .header {
-	text-align: center;
-	margin-top: 30px;
+	margin-top: 20px;
+	color: red;
+}
+
+.title {
 	font-size: 2.5em;
 }
 
-.how_to_play {
-	font-size: 1em;
-	font-style: italic;
-	text-align: center;
+.directions {
+	font-size: 1em;	
+	color: gray;
+	margin-bottom: 20px;
+}
+
+.play {
+	color: blue;
+}
+
+.play:hover {
+	cursor: pointer;
+}
+
+.board {
+	margin-top: 30px;
+}
+
+.board {
+	font-weight: bold;
 	color: gray;
 }
 
-.container {
+.board p {
+	margin:0 0;
+}
+
+.scoreboard {
+	position: absolute;
+	left: 323px;
+	text-align: right;
+}
+
+.timer {
+	margin-top: 52px;
+	float: left;
+	text-align: center;
+}
+
+.highestScore, .currentScore, .timeLeft {
+	color: orange ;
+}
+
+.tiles {
 	background-color: rgb(229, 229, 229);
 	width: 424px;
 	height: 424px;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 40px;
+	position: absolute;
+	top: 300px;
 	border-radius: 5px;
-	box-shadow: 2px;
 }
 
 .tile {
@@ -51,71 +92,14 @@ body {
 	margin-top: 10px;	
 }
 
-.scoreboard {
+.description {
 	position: absolute;
-	margin-top: 100px;
-	margin-left: 1000px;
-	margin-right: 50px;
-	text-align: right;
-	line-height: 1.5em;
+	top:750px;
 }
 
-.timer {
-	position: absolute;
-	margin-top: 100px;
-	margin-left: 240px;
-	text-align: center;
+.description span {
+	text-align: left;
+	font-size: 0.7em;
+	font-weight: normal;
+	/*margin-left: -40px;*/
 }
-
-.gameOver {
-	background-color: black;
-	opacity: 0.5;
-	z-index: 1;
-}
-
-.tag {
-	font-size: 1em;
-	color: gray;
-}
-
-.tag span {
-	font-size: 2.5em;
-	font-weight: bold;
-}
-
-.timeLeft {
-	color: orange;
-}
-
-.scoreboard span {
-	color: orange;
-}
-
-dialog .end{
-	visibility: hidden;
-}
-
-.modal{
-  background-color: rgba(0,0,0,0.7);
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-  height:424px;
-  width:424px;
-  position:fixed;
-  margin-left: auto;
-  margin-right: auto;
-  top:25%;
-  left:34.5%;
-  line-height: 424px;
-  text-align: center;
-  font-size: 3em
-}
-
-/*.modal::backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-}*/

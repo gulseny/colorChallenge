@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>	
 <html>
 
 <head>
@@ -12,49 +12,50 @@
 
 <body>
 
-	<div class='header'><span class='title'>COLOR MATCH</span></div>
-	<div class='how_to_play'> click on correctly colored tiles! </div>
-
-	<div class='scoreboard tag'>
-		HIGHEST SCORE<br><span class='highestScore'>0</span><br>
-		CURRENT SCORE<br><span class='currentScore'>0</span>
-	</div>
-
-	<div class='timer tag'>
-		TIME<br><span class='timeLeft'>20</span><br>
-	</div>
-
-	<div>
-		<audio id='correct' src='sounds/correct.mp3'></audio>
-		<audio id='wrong' src='sounds/wrong.mp3'></audio>
-	</div>
-
-
-	<div class='Main'>
-		<div class='container'>
-			<div class='tile r1 c1'><p class='tile'></p></div>
-			<div class='tile r1 c2'><p class='tile'></p></div>
-			<div class='tile r1 c3'><p class='tile'></p></div>
-			<div class='tile r1 c4'><p class='tile'></p></div>
-			<div class='tile r2 c1'><p class='tile'></p></div>
-			<div class='tile r2 c2'><p class='tile'></p></div>
-			<div class='tile r2 c3'><p class='tile'></p></div>
-			<div class='tile r2 c4'><p class='tile'></p></div>
-			<div class='tile r3 c1'><p class='tile'></p></div>
-			<div class='tile r3 c2'><p class='tile'></p></div>
-			<div class='tile r3 c3'><p class='tile'></p></div>
-			<div class='tile r3 c4'><p class='tile'></p></div>
-			<div class='tile r4 c1'><p class='tile'></p></div>
-			<div class='tile r4 c2'><p class='tile'></p></div>
-			<div class='tile r4 c3'><p class='tile'></p></div>
-			<div class='tile r4 c4'><p class='tile'></p></div>
+	<div class='content'>
+		<div class='header'>
+			<div class='title'>COLOR MATCH</div>
+			<div class='directions'> click on correctly colored tiles! </div>
+			<div class='play'>ready? click here to play!</div>
 		</div>
 
-		<dialog class='ready'>Ready!</dialog>
-		<dialog class='end'>Game Over!</dialog>
+		<div class="board">
+			<div class='scoreboard'>
+				<p>HIGHEST</p><p class='highestScore'>0</p>
+				<p>CURRENT</p><p class='currentScore'>0</p>
+			</div>
+			<div class='timer'><p>TIME</p><p class='timeLeft'>60</p></div>
+		</div>
+
+		<div>
+			<audio id='correct' src='sounds/correct.mp3'></audio>
+			<audio id='wrong' src='sounds/wrong.mp3'></audio>
+		</div>
+
+		<div class='tiles'>
+			<div class='tile r1 c1'></div>
+			<div class='tile r1 c2'></div>
+			<div class='tile r1 c3'></div>
+			<div class='tile r1 c4'></div>
+			<div class='tile r2 c1'></div>
+			<div class='tile r2 c2'></div>
+			<div class='tile r2 c3'></div>
+			<div class='tile r2 c4'></div>
+			<div class='tile r3 c1'></div>
+			<div class='tile r3 c2'></div>
+			<div class='tile r3 c3'></div>
+			<div class='tile r3 c4'></div>
+			<div class='tile r4 c1'></div>
+			<div class='tile r4 c2'></div>
+			<div class='tile r4 c3'></div>
+			<div class='tile r4 c4'></div>
+		</div>		
 		
+		<div class="description">
+			<span>This game is a modified version of the "Stroop Effect" which is named after J. Ridley Stroop who discovered this strange phenomenon in the 1930s: reading a word in the presence of a conflicting message interferes with the processing in the brain and causes confusion.<br><hr>
+			created by Gulsen Yilmaz (www.gulsenyilmaz.com)</span>
+		</div>
 	</div>
-	
 </body>
 
 </html>

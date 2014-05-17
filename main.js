@@ -1,15 +1,16 @@
 $(document).ready(function(){
 
-	var $ready = $('.ready');
-	var $end = $('.end');
-	$end.css('visibility', 'hidden');
-	$ready.addClass('modal');
+	var $play = $('.play');
 
-	$ready.on('click', function(){
-		$ready.removeClass('modal').css('visibility', 'hidden');
+	$play.on('click', function(){
+		$play.css('visibility', 'hidden');
+
 		var currentScore = 0;
 		var highestScore = 0;
-		var timeLeft = 10;
+		var timeLeft = 5;
+		
+		var $timeLeft = $('.timeLeft');
+		$timeLeft.text(timeLeft);
 
 		var colors = ['red','blue', 'green', 'yellow', 'purple', 'pink'];
 		var colorCodes = ['#ff0000','#0000ff', '#00ff00', '#ffff00', '#800080', '#ff00ff'];
@@ -26,7 +27,6 @@ $(document).ready(function(){
 
 		var $tile = $('.tile');
 		var $container = $('.container');
-		var $timeLeft = $('.timeLeft');
 		var $correct = document.getElementById('correct');
 		var $wrong = document.getElementById('wrong');
 
@@ -68,10 +68,10 @@ $(document).ready(function(){
 			timeLeft--;
 			$timeLeft.text(timeLeft);
 			if(timeLeft <= 5){
-				$timeLeft.css({'color': 'red', 'font-size': '3.5em'});
+				$timeLeft.css('color', 'red');
 			}
 			if(timeLeft === 0){
-				$('.end').addClass('modal').css('visibility', 'visible');
+				$play.text('play again?').css('visibility', 'visible');
 				endGame();
 			}
 		}, 1000);
